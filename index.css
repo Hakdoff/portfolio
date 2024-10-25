@@ -84,7 +84,7 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .header-title {
     font-size: 20px;
   }
@@ -177,7 +177,7 @@ a:hover {
 }
 
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .hero-container {
     flex-direction: column;
     justify-content: center;
@@ -334,7 +334,7 @@ a:hover {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .about-container {
     flex-direction: column;
     justify-content: center;
@@ -626,7 +626,7 @@ a:hover {
   }
 }
 
-@media (max-width: 450px) { 
+@media (max-width: 500px) { 
   .footer-container {
     flex-direction: column;
     gap: 2rem;
