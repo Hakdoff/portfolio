@@ -4,7 +4,25 @@
 }
 
 .wrap {
-  padding: 2% 20% 2% 20%;
+  padding: 2% 15% 2% 15%;
+}
+
+@media (max-width: 1440px) {
+  .wrap {
+    padding: 4% 10% 4% 10%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrap {
+    padding: 2% 5% 2% 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    padding: 4% 5% 4% 5%;
+  }
 }
 
 @font-face {
@@ -33,13 +51,43 @@
 }
 
 .header-title{
+  font-size: 40px;
   font-family: "Safira march" !important;
 }
 
 .nav-right {
   display: flex;
   gap: 2rem;
-  align-items: center;
+  font-size: 30px;
+  align-items: center; 
+}
+
+@media (max-width: 1600px) {
+  .nav-right {
+    font-size: 20px;
+  }
+
+  .header-title{
+    font-size: 30px;
+    font-family: "Safira march" !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-right {
+    display: none;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .header-title {
+    font-size: 20px;
+  }
 }
 
 a {
@@ -56,24 +104,12 @@ a:hover {
 
 /* ---------- Hero ---------- */
 .hero {
-  padding: 0% 20%;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   font-family: "Inter", sans-serif;
-  background-color: e0e0e0;
+  background-color: #e0e0e0;
   position: relative;
 }
-
-/* .hero-background {
-  opacity: 0.5;
-  background-color: rgba(128, 128, 128, 0.5);
-  background-image: url('hero.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-} */
 
 .hero-container {
   display: flex;
@@ -94,39 +130,86 @@ a:hover {
 .hero-right {
   width: 60%;
   text-align: center;
-  font-size: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 0px 50px;
 }
 
 .name {
   font-family: "Safira march" !important;
   color: #555050;
   font-weight: 600;
-  font-size: 3rem;
+  font-size: 5rem;
   padding-bottom: 30px;
 }
 
 .intro {
   font-family: "Safira march" !important;
   font-weight: 500;
-  font-size: 3rem;
+  font-size: 5rem;
   padding-bottom: 30px;
 }
 
 .desc {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 2.2rem;
 }
+
+@media (max-width: 1600px) {
+  .hero-right {
+    padding: 0px 0px;
+  }
+
+  .name {
+    font-size: 3rem;
+  }
+  
+  .intro {
+    font-size: 3rem;
+  }
+  
+  .desc {
+    font-size: 1.2rem;
+  }
+}
+
+
+@media (max-width: 450px) {
+  .hero-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-image {
+    width: 60%;
+  }
+
+  .hero-right {
+    padding-top: 20px;
+    width: 100%;
+  }
+
+  .name {
+    font-size: 2.5rem;
+  }
+  
+  .intro {
+    font-size: 2.5rem;
+  }
+}
+
 
 /* ---------- About ---------- */
 .aboutme {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   background-color: #514c4d;
 }
 
@@ -136,33 +219,35 @@ a:hover {
   padding: 3% 0%;
 }
 
-.about-title {
-  font-family: "Safira March";
-  color: #f7f7f7;
-}
-
-.about-desc{
-  line-height: 24px;
-  letter-spacing: 1px;
-  font-weight: 400;
-  font-size: 1.2rem;
-  padding-top: 10px;
-  font-family: "Raleway", sans-serif;
-  color: #f7f7f7;
-}
-
 .about-left {
   padding-top: 10px;
   width: 70%;
   background-color: #8a8686;
-  display: flex;
   border-radius: 20px;
   margin-right: 20px;
-  flex-direction: column;
 }
 
 .about-left-padding {
-  padding: 15px;
+  padding: 85px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.about-title {
+  font-family: "Safira March";
+  color: #f7f7f7;
+  font-size: 4rem;
+}
+
+.about-desc{
+  line-height: 35px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 2.2rem;
+  padding-top: 10px;
+  font-family: "Raleway", sans-serif;
+  color: #f7f7f7;
 }
 
 .about-buttons-container {
@@ -181,7 +266,7 @@ a:hover {
   padding: 10px 20px 10px 20px;
   font-family: "Raleway", sans-serif;
   background-color: #514c4d;
-  font-size: 1.2rem;
+  font-size: 2.2rem;
   font-weight: 500;
   color: white;
 }
@@ -197,6 +282,73 @@ a:hover {
   border-radius: 20px;
 }
 
+@media (max-width: 1600px) {
+  .about-left-padding {
+    padding: 15px;
+    gap: 2rem;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-desc{
+    font-size: 1.2rem;
+  }
+
+  .about-button {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-left {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  .about-title {
+    font-family: "Safira March";
+    font-size: 15px;
+    color: #f7f7f7;
+  }
+
+  .about-left-padding {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+  }
+
+  .about-desc{
+    font-size: 1.2rem;
+  }
+
+  .about-right {
+    display: none;
+  }
+  
+  .about-image {
+    width: 100%;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .about-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about-left {
+    width: 100%;
+  }
+
+  .about-right {
+    display: none;
+  }
+}
+
 
 /* ---------- Tech Stack ---------- */
 .techstack-container {
@@ -208,7 +360,7 @@ a:hover {
 }
 
 .tech-left {
-  font-size: 30px;
+  font-size: 4rem;
   display: flex;
   font-family: "Safira March";
   justify-content: center;
@@ -224,11 +376,8 @@ a:hover {
 }
 
 .tech-row {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
   gap: 4rem;
+  justify-content: center;
 }
 
 .custom-card {
@@ -247,8 +396,8 @@ a:hover {
 
 .card-left {
   background: white;
-  width: 100px; 
-  height: 100px; 
+  width: 160px; 
+  height: 160px; 
   border-radius: 50%; 
   display: flex;
   justify-content: center;
@@ -259,18 +408,46 @@ a:hover {
   width: 70%;
 }
 
+@media (max-width: 1600px) {
+  .tech-left {
+    font-size: 30px;
+  }
+
+  .card-left {
+    width: 100px; 
+    height: 100px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-row {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .card-left {
+    width: 80px; 
+    height: 80px; 
+  }
+
+  .card-left svg {
+    width: 50%;
+  }
+}
+
 /* ---------- Projects ---------- */
 .project {
+  padding-top: 40px;
   display: flex;
-  justify-content: space-between;
   background-color: #514c4d;
+  justify-content: center;
 }
 
 .project-row {
   padding-top: 40px;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
   justify-content: center;
   gap: 5rem;
 }
@@ -285,7 +462,7 @@ a:hover {
 
 .card {
   --blur: 16px;
-  --size: clamp(250px, 10vmin, 550px);
+  --size: clamp(250px, 40vmin, 550px);
   width: var(--size);
   aspect-ratio: 4 / 3;
   border-radius: 50px;
@@ -312,7 +489,6 @@ a:hover {
   width: 100%;
   background: red;
   display: grid;
-  grid-template-row: auto auto;
   gap: 0.5ch;
   background: hsl(0 0% 100% / 0.5);
   backdrop-filter: blur(var(--blur));
@@ -359,7 +535,20 @@ a:hover {
   --hover: 1;
 }
 
+@media (max-width: 1600px) {
+  .card {
+    --size: clamp(250px, 10vmin, 550px);
+  }
+}
+
+
+
 /* ---------- Footer ---------- */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .footer-left {
   display: flex;
   align-items: center;
@@ -377,14 +566,15 @@ a:hover {
 
 .footer-a {
   color: #6a6464!important;
+  font-size: 40px;
 }
 
 .footer-card {
   border-radius: 50%;
   border: 2px solid #6a6464;
   justify-content: center;
-  width: 40px; 
-  height: 40px;
+  width: 80px; 
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -392,6 +582,7 @@ a:hover {
 
 .footer-title {
   color:  #6a6464;
+  font-size: 20px;
   font-family: "Safira march" !important;
 }
 
@@ -404,5 +595,52 @@ a:hover {
 
 .copyright {
   font-family: "Raleway", sans-serif;
-  font-size: small;
+  font-size: x-large;
+}
+
+.icons {
+  font-size: 40px;
+}
+
+@media (max-width: 1600px) {
+  .footer-card {
+    width: 40px; 
+    height: 40px;
+  }
+
+  .footer-title {
+    font-size: 15px;
+  }
+
+  .footer-a {
+    color: #6a6464!important;
+    font-size: 20px;
+  }
+
+  .icons {
+    font-size: 20px;
+  }
+
+  .copyright {
+    font-size: small;
+  }
+}
+
+@media (max-width: 450px) { 
+  .footer-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-left {
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  }
+
+  .footer-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }
