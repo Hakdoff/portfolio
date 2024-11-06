@@ -6,7 +6,7 @@
   "homepage": "https://github.com/Hakdoff/portfolio",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build --base=/portfolio_react/",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
