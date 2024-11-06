@@ -3,7 +3,7 @@ import Portfolio from './portfolio/portfolio';
 
 function App() {
   return (
-    <BrowserRouter basename="/portfolio_react">
+    <BrowserRouter basename="/portfolio">
       <Portfolio />
     </BrowserRouter>
   );
